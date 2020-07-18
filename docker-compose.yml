@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+
+  knight-solver:
+    container_name: knight-solver
+    hostname: knight-solver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+    - 80:5000

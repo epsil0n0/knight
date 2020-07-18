@@ -1,0 +1,35 @@
+Knight Short and Minimum step Path Solver
+
+
+Given a chess board, find the shortest distance (minimum number of steps) and path taken by a Knight to reach given destination from given source.
+
+The idea is to use BFS algorithm to solve this problem.
+
+Getting Started
+
+
+git clone https://github.com/epsil0n0/knight.git
+
+cd knight
+
+docker-compose up -d
+
+
+
+
+example to send a request to /solve api in POST method:
+
+
+curl --location --request POST 'localhost/solve' \
+--header 'Content-Type: application/json' \
+--data-raw '{"n":8,
+ "start_x":0,
+ "start_y": 7,
+ "end_x": 7,
+ "end_y": 0
+}'
+
+
+output:
+
+{"Minimum number of steps required is": 6, "The complete path is:": [[0, 7], [2, 6], [4, 5], [6, 4], [4, 3], [6, 2], [7, 0]]}
