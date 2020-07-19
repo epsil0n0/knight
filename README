@@ -5,8 +5,13 @@ Given a chess board, find the shortest distance (minimum number of steps) and pa
 
 The idea is to use BFS algorithm to solve this problem.
 
-Getting Started
 
+Requirements tools:
+docker
+docker-compose
+
+
+How to run project:
 
 git clone https://github.com/epsil0n0/knight.git
 
@@ -16,11 +21,16 @@ docker-compose up -d
 
 
 
+How To send request:
 
-example to send a request to /solve api in POST method:
+request to "/" api in POST method:
 
+Hint:
+n: number of N*N ChessBoard size
+start_x,start_y: start location on the chessboard
+end_x,end_y: target location on the chessboard  
 
-curl --location --request POST 'localhost/solve' \
+curl --location --request POST 'localhost' \
 --header 'Content-Type: application/json' \
 --data-raw '{"n":8,
  "start_x":0,
@@ -28,6 +38,7 @@ curl --location --request POST 'localhost/solve' \
  "end_x": 7,
  "end_y": 0
 }'
+
 
 
 output:

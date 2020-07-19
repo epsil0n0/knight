@@ -110,7 +110,7 @@ def BFS(source, destination, n):
 app = Flask(__name__)
 
 
-@app.route('/solve', methods=['POST'])
+@app.route('/', methods=['POST'])
 def solve():
     raw_data = request.get_json()
     N = raw_data['n']
@@ -128,6 +128,6 @@ def solve():
     return json.dumps(response), 201
 
 
-if __name__ == '__main__':
-    print("starting...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+#if __name__ == '__main__':
+#    print("starting...")
+#    app.run(host='0.0.0.0', port=5000, debug=True)
